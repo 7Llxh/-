@@ -24,3 +24,6 @@ tests/*_recognize/
 tests/*_result/
 *_recognize/
 *_result/
+
+# Selenium 驱动目录（爬虫已移除，残留驱动/法律文本/测试产物不入库）
+chromedriver-win64/
