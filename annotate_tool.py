@@ -231,7 +231,7 @@ class AnnoTool:
         if not self.cur:
             return
         d = {
-            "image": self.cur["image"],
+            "image": os.path.relpath(self.cur["image"], HERE).replace("\\", "/"),
             "model": self.cur["model"],
             "view": self.view_var.get(),
             "vehicle_box": self.cur["vehicle_box"],

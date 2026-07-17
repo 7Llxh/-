@@ -14,8 +14,9 @@ from collections import Counter
 import cv2
 import numpy as np
 
-ANN = r"e:/车辆识别/-/data/annotations"
-OUT = r"e:/车辆识别/-/data/parts_dataset"
+HERE = os.path.dirname(os.path.abspath(__file__))
+ANN = os.path.join(HERE, "data", "annotations")
+OUT = os.path.join(HERE, "data", "parts_dataset")
 PARTS = ["taillight", "headlight", "mirror", "window", "wheel",
          "plate", "grille", "bumper", "exhaust"]
 SEED = 42
@@ -36,7 +37,7 @@ def main():
             d = json.load(fp)
         if not d.get("parts"):
             continue
-        items.append((d["image"], d["parts"], os.path.splitext(os.path.basename(f))[0]))
+        items.append((os.path.join(HERE, d["image"]), d["parts"], os.path.splitext(os.path.basename(f))[0]))
     print(f"有部件框的标注: {len(items)}")
 
     if os.path.exists(OUT):

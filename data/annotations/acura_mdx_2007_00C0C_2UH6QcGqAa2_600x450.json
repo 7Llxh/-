@@ -1,5 +1,5 @@
 {
-  "image": "e:\\车辆识别\\-\\data\\raw\\acura_mdx_2007\\00C0C_2UH6QcGqAa2_600x450.jpg",
+  "image": "data/raw/acura_mdx_2007/00C0C_2UH6QcGqAa2_600x450.jpg",
   "model": "acura_mdx_2007",
   "view": "front",
   "vehicle_box": [

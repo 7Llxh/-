@@ -17,8 +17,9 @@ from collections import defaultdict
 import cv2
 import numpy as np
 
-ANN = r"e:/车辆识别/-/data/annotations"
-OUT = r"e:/车辆识别/-/data/orientation_dataset"
+HERE = os.path.dirname(os.path.abspath(__file__))
+ANN = os.path.join(HERE, "data", "annotations")
+OUT = os.path.join(HERE, "data", "orientation_dataset")
 VIEWS = ["front", "rear", "side"]
 SEED = 42
 
@@ -41,7 +42,7 @@ def main():
         view = d.get("view", "")
         if not vb or view not in VIEWS:
             continue
-        by_model[d["model"]].append((d["image"], vb, view,
+        by_model[d["model"]].append((os.path.join(HERE, d["image"]), vb, view,
                                     os.path.splitext(os.path.basename(f))[0]))
 
     if os.path.exists(OUT):
