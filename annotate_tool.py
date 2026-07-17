@@ -20,6 +20,7 @@ import sys
 import tkinter as tk
 
 import cv2
+import numpy as np
 from PIL import Image, ImageTk
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -28,6 +29,7 @@ from detect_vehicle import detect_vehicle_full
 
 DATA_DIR = os.path.join(HERE, "data", "raw")
 OUT_DIR = os.path.join(HERE, "data", "annotations")
+QUEUE_FILE = os.path.join(HERE, "data", "annotate_queue.json")
 os.makedirs(OUT_DIR, exist_ok=True)
 
 PART_LABELS = ["taillight", "headlight", "mirror", "window", "wheel",
@@ -63,6 +65,11 @@ def detect(path):
     return {"vehicle_box": [x1, y1, x2, y2]}
 
 
+def imread_unicode(path):
+    """cv2.imread 不支持中文路径，用 imdecode+fromfile 替代。"""
+    return cv2.imdecode(np.fromfile(path, dtype=np.uint8), cv2.IMREAD_COLOR)
+
+
 class AnnoTool:
     def __init__(self, root):
         self.root = root
@@ -77,12 +84,16 @@ class AnnoTool:
         self.rect_id = None
         self.scale = 1.0
         self.tk_img = None
+        self.queue = self._load_queue()
+        self.queue_idx = -1
         self._build_ui()
         if self.images:
             self.idx = self.first_unannotated()
             self.load(self.idx)
         else:
             self.status.config(text=f"未在 {DATA_DIR} 找到图片")
+        if self.queue:
+            print(f"标注队列: {len(self.queue)} 张需增强（按 n 跳到下一张）")
 
     def _build_ui(self):
         self.canvas = tk.Canvas(self.root, width=820, height=620, bg="gray")
@@ -114,11 +125,14 @@ class AnnoTool:
                   command=lambda: self.load(self.idx + 1)).grid(row=r, column=1, pady=2); r += 1
         tk.Button(self.root, text="跳到未标注",
                   command=self.goto_unannotated).grid(row=r, column=1, pady=2); r += 1
+        tk.Button(self.root, text="下一张需增强 (N)",
+                  command=self.goto_next_queue).grid(row=r, column=1, pady=2); r += 1
         self.status = tk.Label(self.root, text="", anchor="w", width=40)
         self.status.grid(row=r, column=1, sticky="w")
         self.root.bind("a", lambda e: self.load(self.idx - 1))
         self.root.bind("d", lambda e: self.load(self.idx + 1))
         self.root.bind("s", lambda e: self.save())
+        self.root.bind("n", lambda e: self.goto_next_queue())
 
     def out_path(self, idx=None):
         i = self.idx if idx is None else idx
@@ -136,6 +150,37 @@ class AnnoTool:
     def goto_unannotated(self):
         self.idx = self.first_unannotated()
         self.load(self.idx)
+
+    def _load_queue(self):
+        if os.path.exists(QUEUE_FILE):
+            with open(QUEUE_FILE, encoding="utf-8") as f:
+                return json.load(f)
+        return []
+
+    def _save_queue(self):
+        with open(QUEUE_FILE, "w", encoding="utf-8") as f:
+            json.dump(self.queue, f, ensure_ascii=False, indent=2)
+
+    def load_queue(self, entry):
+        """从标注队列加载一张图（用队列的 vehicle_box，跳过重检测）。"""
+        path = os.path.join(HERE, entry["path"])
+        self.cur = {"image": path, "model": entry["model"],
+                    "vehicle_box": entry.get("vehicle_box")}
+        self.parts = []
+        self.view_var.set(entry.get("view", ""))
+        self.model_var.set(entry["model"])
+        self.load_existing()
+        self.render()
+
+    def goto_next_queue(self):
+        if not self.queue:
+            self.status.config(text="标注队列为空（先跑 check_taillight_detection.py 生成）")
+            return
+        self.queue_idx = (self.queue_idx + 1) % len(self.queue)
+        self.load_queue(self.queue[self.queue_idx])
+        self.status.config(
+            text=f"队列 {self.queue_idx+1}/{len(self.queue)}  "
+                 f"{os.path.basename(self.cur['image'])}  部件:{len(self.parts)}")
 
     def load(self, idx):
         if not self.images:
@@ -168,7 +213,10 @@ class AnnoTool:
     def render(self):
         if not self.cur:
             return
-        img = cv2.imread(self.cur["image"])
+        img = imread_unicode(self.cur["image"])
+        if img is None:
+            self.status.config(text=f"读图失败: {os.path.basename(self.cur['image'])}")
+            return
         ih, iw = img.shape[:2]
         s = min(820 / iw, 620 / ih)
         self.scale = s
@@ -230,8 +278,9 @@ class AnnoTool:
     def save(self):
         if not self.cur:
             return
+        cur_rel = os.path.relpath(self.cur["image"], HERE).replace("\\", "/")
         d = {
-            "image": os.path.relpath(self.cur["image"], HERE).replace("\\", "/"),
+            "image": cur_rel,
             "model": self.cur["model"],
             "view": self.view_var.get(),
             "vehicle_box": self.cur["vehicle_box"],
@@ -239,7 +288,18 @@ class AnnoTool:
         }
         with open(self.out_path(), "w", encoding="utf-8") as f:
             json.dump(d, f, ensure_ascii=False, indent=2)
-        self.status.config(text=f"已保存: {os.path.basename(self.out_path())}")
+        # 出队：当前图在标注队列则移除（标注增强完成）
+        before = len(self.queue)
+        self.queue = [q for q in self.queue if q.get("path") != cur_rel]
+        if len(self.queue) < before:
+            self._save_queue()
+            if self.queue_idx >= len(self.queue):
+                self.queue_idx = -1
+            self.status.config(
+                text=f"已保存并出队，队列剩余 {len(self.queue)}  "
+                     f"{os.path.basename(self.out_path())}")
+        else:
+            self.status.config(text=f"已保存: {os.path.basename(self.out_path())}")
 
 
 if __name__ == "__main__":

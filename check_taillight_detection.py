@@ -12,6 +12,7 @@
     python check_taillight_detection.py 新车型名      # 只检查某车型
 """
 import glob
+import json
 import os
 import sys
 
@@ -37,6 +38,7 @@ def check_model(model_dir):
     views = {"front": 0, "rear": 0, "side": 0, "uncertain": 0}
     rear_tail = 0
     rear_no_tail = 0
+    queue = []
     for p in imgs:
         img = imread_unicode(p)
         if img is None:
@@ -52,6 +54,13 @@ def check_model(model_dir):
                 tls = detect_taillights(vc)
                 if not tls:
                     rear_no_tail += 1
+                    queue.append({
+                        "path": os.path.relpath(p, HERE).replace("\\", "/"),
+                        "model": model,
+                        "view": "rear",
+                        "vehicle_box": [x1, y1, x2, y2],
+                        "reason": "rear无尾灯",
+                    })
                 rear_tail += len(tls)
     rear = views["rear"]
     avg = rear_tail / rear if rear else 0
@@ -62,6 +71,7 @@ def check_model(model_dir):
         flag += f"  ⚠️ {rear_no_tail}/{rear} 张rear图无尾灯"
     print(f"{model}: 图{len(imgs)} | 朝向{views} | "
           f"rear图{rear} 尾灯{rear_tail} 平均{avg:.1f}/rear图{flag}")
+    return queue
 
 
 def main():
@@ -73,8 +83,15 @@ def main():
         print("未找到车型目录:", model_filter or RAW)
         return
     print(f"检查 {len(dirs)} 个车型（跑车辆+朝向+部件检测，稍等）...\n")
+    all_queue = []
     for d in dirs:
-        check_model(d)
+        all_queue.extend(check_model(d))
+    queue_path = os.path.join(HERE, "data", "annotate_queue.json")
+    with open(queue_path, "w", encoding="utf-8") as f:
+        json.dump(all_queue, f, ensure_ascii=False, indent=2)
+    print(f"\n标注队列已写入: {queue_path}")
+    print(f"需增强标注: {len(all_queue)} 张（rear 无尾灯）")
+    print("用 annotate_tool.py 按 n 逐张补标尾灯框。")
     print("\n判读: 平均尾灯/rear图 应 ≈2。明显偏低或大量rear图无尾灯 = 漏检(补标注+重训部件)；"
           "尾灯少但rear图也少 = 数据少(补车尾图即可)。")
 

@@ -27,3 +27,6 @@ tests/*_result/
 
 # Selenium 驱动目录（爬虫已移除，残留驱动/法律文本/测试产物不入库）
 chromedriver-win64/
+
+# 标注增强工作队列（check 生成，本地工作文件）
+data/annotate_queue.json
