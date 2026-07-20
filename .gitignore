@@ -30,3 +30,6 @@ chromedriver-win64/
 
 # 标注增强工作队列（check 生成，本地工作文件）
 data/annotate_queue.json
+
+# VMMRdb 系列清单（survey 生成，本地工作文件）
+data/vmmr_series.json

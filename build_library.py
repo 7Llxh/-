@@ -47,7 +47,12 @@ def main():
             img = imread_unicode(p)
             if img is None:
                 continue
-            items.append((img, model_series, p))
+            # year 从文件名 {make_model}__{year}__{idx}.jpg 解析（unknown/非数字 -> None）
+            fname = os.path.splitext(os.path.basename(p))[0]
+            parts = fname.split("__")
+            yr_field = parts[1] if len(parts) >= 2 else ""
+            year = yr_field if (yr_field and yr_field != "unknown" and yr_field.isdigit()) else None
+            items.append((img, model_series, p, year))
 
     print(f"[{NAME}] device={DEVICE}  入库样本: {len(items)}")
     if not items:
@@ -57,8 +62,8 @@ def main():
     feats = extract_features(model, crops, device=DEVICE)
 
     meta = []
-    for i, (crop, model_series, p) in enumerate(items):
-        entry = {"id": i, "model_series": model_series, "sample_path": p}
+    for i, (crop, model_series, p, year) in enumerate(items):
+        entry = {"id": i, "model_series": model_series, "sample_path": p, "year": year}
         if NAME == "taillight":
             from detect_vehicle import _judge_lit
             is_lit, v_mean = _judge_lit(crop)

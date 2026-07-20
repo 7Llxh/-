@@ -58,11 +58,35 @@ def _search_library(embedder, index, meta, crop, k=TOP_K, lit_filter=None):
     return matches
 
 
-def _top_result(matches):
-    top = matches[0] if matches else None
-    conf = top["similarity"] if top else 0.0
-    label = top["model_series"] if (top and conf >= MIN_CONF) else "未知(置信度低)"
-    return label, conf, matches
+def _judge_model(matches):
+    """车型 = 候选 model_series 众数（按计数）。置信度 = 该车型候选最高相似度。"""
+    if not matches:
+        return "未知(置信度低)", 0.0
+    from collections import Counter
+    c = Counter(m["model_series"] for m in matches)
+    model, _ = c.most_common(1)[0]
+    conf = max(m["similarity"] for m in matches if m["model_series"] == model)
+    if conf < MIN_CONF:
+        return "未知(置信度低)", conf
+    return model, conf
+
+
+def _judge_year(matches, model):
+    """该车型候选 year 统计：集中给范围，分散标不确定。无年份标未知。"""
+    years = [m.get("year") for m in matches if m["model_series"] == model and m.get("year")]
+    if not years:
+        return "年份未知"
+    from collections import Counter
+    yrs = sorted(int(y) for y in years)
+    span = yrs[-1] - yrs[0]
+    if len(yrs) >= 3 and span <= 2:
+        return f"约{yrs[0]}-{yrs[-1]}"
+    if len(yrs) >= 3:
+        return f"年份不确定({yrs[0]}-{yrs[-1]})"
+    if span <= 2:
+        return f"约{yrs[0]}-{yrs[-1]}" if yrs[0] != yrs[-1] else f"约{yrs[0]}"
+    mode = Counter(yrs).most_common(1)[0][0]
+    return f"约{mode}({yrs[0]}-{yrs[-1]})"
 
 
 def _draw(img, box, label, conf, view, color):
@@ -100,13 +124,15 @@ def recognize(image_path):
             tc = vcrop[ty1:ty2, tx1:tx2]
             is_lit, _ = _judge_lit(tc)
             matches = _search_library(_tl_embedder, _tl_index, _tl_meta, tc, lit_filter=is_lit)
-            label, conf, matches = _top_result(matches)
+            model, conf = _judge_model(matches)
+            year_range = _judge_year(matches, model) if model != "未知(置信度低)" else "年份未知"
             color = (0, 0, 255) if is_lit else (0, 255, 0)
             results.append({"box": [x1, y1, x2, y2], "view": view, "lit": bool(is_lit),
-                            "top1": label, "confidence": round(conf, 3),
+                            "make_model": model, "year_range": year_range,
+                            "confidence": round(conf, 3),
                             "topk": [{"model": m["model_series"], "sim": round(m["similarity"], 3)}
                                      for m in matches[:3]]})
-            _draw(result_img, (x1, y1, x2, y2), label, conf, view, color)
+            _draw(result_img, (x1, y1, x2, y2), f"{model} {year_range}", conf, view, color)
         else:
             # 正/侧:整车兜底
             if _vh_index is None:
@@ -114,12 +140,14 @@ def recognize(image_path):
                 _draw(result_img, (x1, y1, x2, y2), "兜底库未构建", 0, view, (255, 255, 0))
                 continue
             matches = _search_library(_vh_embedder, _vh_index, _vh_meta, vcrop)
-            label, conf, matches = _top_result(matches)
+            model, conf = _judge_model(matches)
+            year_range = _judge_year(matches, model) if model != "未知(置信度低)" else "年份未知"
             results.append({"box": [x1, y1, x2, y2], "view": view,
-                            "top1": label, "confidence": round(conf, 3),
+                            "make_model": model, "year_range": year_range,
+                            "confidence": round(conf, 3),
                             "topk": [{"model": m["model_series"], "sim": round(m["similarity"], 3)}
                                      for m in matches[:3]]})
-            _draw(result_img, (x1, y1, x2, y2), label, conf, f"{view}兜底", (255, 200, 0))
+            _draw(result_img, (x1, y1, x2, y2), f"{model} {year_range}", conf, f"{view}兜底", (255, 200, 0))
 
     stem = os.path.splitext(os.path.basename(image_path))[0]
     od = f"{os.path.splitext(image_path)[0]}_recognize"
