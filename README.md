@@ -113,7 +113,7 @@ python recognize.py data/raw/acura_mdx_2007/00101_59bqNeCJGMt_600x450.jpg
 ### 2. 标注(产出部件/朝向数据集)
 
 ```bash
-python annotate_tool.py   # 拖拽标部件框 + 选朝向,存 data/annotations/*.json
+python annotate_tool.py [车型名]   # 拖拽标部件框 + 选朝向,存 data/annotations/*.json;传车型名从该车型开始
 ```
 
 ### 3. 训练 + 建库（一键）
