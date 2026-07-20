@@ -18,7 +18,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ANN = os.path.join(HERE, "data", "annotations")
 OUT = os.path.join(HERE, "data", "parts_dataset")
 PARTS = ["taillight", "headlight", "mirror", "window", "wheel",
-         "plate", "grille", "bumper", "exhaust"]
+         "plate", "grille", "exhaust"]
 SEED = 42
 
 

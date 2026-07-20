@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""训练 YOLOv8s 部件检测器（9 类部件）。
+"""训练 YOLOv8s 部件检测器（8 类部件）。
 
 用法（daily 环境）:
     python train_parts.py
@@ -48,7 +48,8 @@ def main():
         device=device,
         workers=8,
         project=os.path.join(HERE, "runs", "detect"),
-        name="parts_v2",          # 新 run，保留旧 parts 结果对比
+        name="parts_v2",          # exist_ok 直接覆盖 parts_v2，供 detect_vehicle 用
+        exist_ok=True,
         # 小样本增强(103 图)：mixup 正则、轻微旋转、末段关 mosaic 提精度
         mixup=0.15,
         degrees=5.0,

@@ -33,7 +33,7 @@ QUEUE_FILE = os.path.join(HERE, "data", "annotate_queue.json")
 os.makedirs(OUT_DIR, exist_ok=True)
 
 PART_LABELS = ["taillight", "headlight", "mirror", "window", "wheel",
-               "plate", "grille", "bumper", "exhaust"]
+               "plate", "grille", "exhaust"]
 PART_COLORS = {
     "taillight": (0, 0, 255), "headlight": (255, 255, 0),
     "mirror": (255, 0, 255), "window": (0, 255, 255),
