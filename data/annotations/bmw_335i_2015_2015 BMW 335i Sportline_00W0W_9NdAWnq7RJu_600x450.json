@@ -1,0 +1,94 @@
+{
+  "image": "data/raw/buick_century_2000/2000 Buick Century Custom_00000_fMMW143ss6k_600x450.jpg",
+  "model": "buick_century_2000",
+  "view": "front",
+  "vehicle_box": [
+    0,
+    175,
+    40,
+    224
+  ],
+  "parts": [
+    {
+      "label": "headlight",
+      "box": [
+        76,
+        259,
+        158,
+        285
+      ]
+    },
+    {
+      "label": "mirror",
+      "box": [
+        187,
+        193,
+        219,
+        214
+      ]
+    },
+    {
+      "label": "mirror",
+      "box": [
+        62,
+        193,
+        81,
+        207
+      ]
+    },
+    {
+      "label": "window",
+      "box": [
+        73,
+        169,
+        187,
+        218
+      ]
+    },
+    {
+      "label": "window",
+      "box": [
+        185,
+        159,
+        231,
+        206
+      ]
+    },
+    {
+      "label": "wheel",
+      "box": [
+        150,
+        251,
+        195,
+        325
+      ]
+    },
+    {
+      "label": "wheel",
+      "box": [
+        222,
+        209,
+        241,
+        251
+      ]
+    },
+    {
+      "label": "grille",
+      "box": [
+        1,
+        244,
+        75,
+        289
+      ]
+    },
+    {
+      "label": "bumper",
+      "box": [
+        0,
+        276,
+        131,
+        325
+      ]
+    }
+  ]
+}

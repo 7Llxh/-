@@ -1,0 +1,49 @@
+{
+  "image": "data/raw/buick_century_2000/2000 Buick Century Custom_00j0j_8I7YYK8xW8f_600x450.jpg",
+  "model": "buick_century_2000",
+  "view": "side",
+  "vehicle_box": [
+    0,
+    175,
+    25,
+    231
+  ],
+  "parts": [
+    {
+      "label": "taillight",
+      "box": [
+        16,
+        223,
+        222,
+        255
+      ]
+    },
+    {
+      "label": "window",
+      "box": [
+        36,
+        153,
+        200,
+        196
+      ]
+    },
+    {
+      "label": "bumper",
+      "box": [
+        15,
+        254,
+        226,
+        306
+      ]
+    },
+    {
+      "label": "exhaust",
+      "box": [
+        169,
+        288,
+        195,
+        309
+      ]
+    }
+  ]
+}
