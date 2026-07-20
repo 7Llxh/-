@@ -72,7 +72,7 @@ def imread_unicode(path):
 
 
 class AnnoTool:
-    def __init__(self, root):
+    def __init__(self, root, start_model=None):
         self.root = root
         self.images = scan_images()
         self.idx = 0
@@ -89,7 +89,10 @@ class AnnoTool:
         self.queue_idx = -1
         self._build_ui()
         if self.images:
-            self.idx = self.first_unannotated()
+            if start_model:
+                self.idx = next((i for i, (m, _) in enumerate(self.images) if m == start_model), 0)
+            else:
+                self.idx = self.first_unannotated()
             self.load(self.idx)
         else:
             self.status.config(text=f"未在 {DATA_DIR} 找到图片")
@@ -320,7 +323,8 @@ class AnnoTool:
 
 
 if __name__ == "__main__":
+    start_model = sys.argv[1] if len(sys.argv) > 1 else None
     root = tk.Tk()
     root.title("车辆部件标注工具")
-    AnnoTool(root)
+    AnnoTool(root, start_model)
     root.mainloop()
