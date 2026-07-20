@@ -71,16 +71,21 @@ python -c "import torch; print(torch.__version__, torch.cuda.is_available())"
 ├── recognize.py              # 识别程序(双路径 + 可视化)
 ├── build_all.py              # 一键训练+建库
 ├── check_taillight_detection.py  # 检查尾灯漏检 + 产标注队列
+├── config.py                 # VMMRdb 配置(数据路径/阈值)
+├── survey_vmmr.py            # 扫 VMMRdb 归并系列 + 剔除稀疏
 ├── requirements.txt
 ├── 需求分析.md / 原理.md / *-技术设计.md
+├── docs/实施计划/            # 实施计划文档
 ├── data/
 │   ├── raw/{车型}/           # 原始图(当前 5 车型)
 │   ├── annotations/          # 标注 JSON
+│   ├── annotate_queue.json   # 标注增强队列(check 产,gitignore)
+│   ├── vmmr_series.json      # VMMRdb 系列清单(survey 产,gitignore)
 │   ├── orientation_dataset/  # 朝向数据集
 │   ├── parts_dataset/        # 部件数据集
 │   ├── taillight_dataset/    # 尾灯特征训练集
 │   ├── vehicle_dataset/      # 整车特征训练集
-│   └── features/             # FAISS 库 + 元数据
+│   └── features/             # FAISS 库 + 元数据(含 year)
 └── runs/
     ├── cls/orientation/                      # 朝向分类器
     ├── detect/parts_v2/                      # 部件检测器
