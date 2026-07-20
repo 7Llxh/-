@@ -1,0 +1,85 @@
+{
+  "image": "data/raw/acura_integra_1987/acura_integra_1987_0.jpg",
+  "model": "acura_integra_1987",
+  "view": "rear",
+  "vehicle_box": [
+    22,
+    73,
+    533,
+    358
+  ],
+  "parts": [
+    {
+      "label": "window",
+      "box": [
+        217,
+        74,
+        486,
+        162
+      ]
+    },
+    {
+      "label": "window",
+      "box": [
+        69,
+        77,
+        211,
+        175
+      ]
+    },
+    {
+      "label": "mirror",
+      "box": [
+        33,
+        118,
+        76,
+        146
+      ]
+    },
+    {
+      "label": "taillight",
+      "box": [
+        278,
+        199,
+        423,
+        249
+      ]
+    },
+    {
+      "label": "taillight",
+      "box": [
+        468,
+        170,
+        527,
+        217
+      ]
+    },
+    {
+      "label": "wheel",
+      "box": [
+        158,
+        238,
+        243,
+        355
+      ]
+    },
+    {
+      "label": "wheel",
+      "box": [
+        20,
+        163,
+        81,
+        246
+      ]
+    },
+    {
+      "label": "plate",
+      "box": [
+        427,
+        271,
+        480,
+        309
+      ]
+    }
+  ]
+}

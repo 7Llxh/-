@@ -1,0 +1,103 @@
+{
+  "image": "data/raw/acura_mdx_2011/00L0L_8PKzrZrgAT8_600x450.jpg",
+  "model": "acura_mdx_2011",
+  "view": "front",
+  "vehicle_box": [
+    72,
+    19,
+    598,
+    449
+  ],
+  "parts": [
+    {
+      "label": "headlight",
+      "box": [
+        187,
+        196,
+        388,
+        314
+      ]
+    },
+    {
+      "label": "headlight",
+      "box": [
+        571,
+        196,
+        598,
+        260
+      ]
+    },
+    {
+      "label": "mirror",
+      "box": [
+        74,
+        95,
+        133,
+        142
+      ]
+    },
+    {
+      "label": "mirror",
+      "box": [
+        447,
+        87,
+        477,
+        125
+      ]
+    },
+    {
+      "label": "window",
+      "box": [
+        160,
+        26,
+        469,
+        134
+      ]
+    },
+    {
+      "label": "window",
+      "box": [
+        93,
+        30,
+        152,
+        152
+      ]
+    },
+    {
+      "label": "wheel",
+      "box": [
+        107,
+        267,
+        174,
+        425
+      ]
+    },
+    {
+      "label": "wheel",
+      "box": [
+        77,
+        165,
+        108,
+        234
+      ]
+    },
+    {
+      "label": "plate",
+      "box": [
+        481,
+        343,
+        567,
+        411
+      ]
+    },
+    {
+      "label": "grille",
+      "box": [
+        379,
+        226,
+        582,
+        326
+      ]
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "image": "data/raw/acura_mdx_2009/00U0U_iS2DqpzTe65_600x450.jpg",
+  "model": "acura_mdx_2009",
+  "view": "front",
+  "vehicle_box": [
+    1,
+    56,
+    334,
+    336
+  ],
+  "parts": [
+    {
+      "label": "headlight",
+      "box": [
+        246,
+        193,
+        331,
+        255
+      ]
+    },
+    {
+      "label": "headlight",
+      "box": [
+        1,
+        194,
+        76,
+        258
+      ]
+    },
+    {
+      "label": "mirror",
+      "box": [
+        274,
+        115,
+        312,
+        143
+      ]
+    },
+    {
+      "label": "mirror",
+      "box": [
+        13,
+        117,
+        51,
+        148
+      ]
+    },
+    {
+      "label": "window",
+      "box": [
+        48,
+        70,
+        282,
+        148
+      ]
+    },
+    {
+      "label": "grille",
+      "box": [
+        70,
+        213,
+        252,
+        291
+      ]
+    }
+  ]
+}

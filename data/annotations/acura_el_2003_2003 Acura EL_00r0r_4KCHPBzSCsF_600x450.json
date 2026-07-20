@@ -1,0 +1,85 @@
+{
+  "image": "data/raw/acura_el_2003/2003 Acura EL_00r0r_4KCHPBzSCsF_600x450.jpg",
+  "model": "acura_el_2003",
+  "view": "front",
+  "vehicle_box": [
+    26,
+    140,
+    212,
+    269
+  ],
+  "parts": [
+    {
+      "label": "headlight",
+      "box": [
+        166,
+        188,
+        210,
+        220
+      ]
+    },
+    {
+      "label": "headlight",
+      "box": [
+        22,
+        192,
+        78,
+        219
+      ]
+    },
+    {
+      "label": "mirror",
+      "box": [
+        174,
+        164,
+        198,
+        179
+      ]
+    },
+    {
+      "label": "mirror",
+      "box": [
+        32,
+        164,
+        55,
+        179
+      ]
+    },
+    {
+      "label": "window",
+      "box": [
+        50,
+        142,
+        180,
+        175
+      ]
+    },
+    {
+      "label": "grille",
+      "box": [
+        74,
+        198,
+        165,
+        226
+      ]
+    },
+    {
+      "label": "headlight",
+      "box": [
+        168,
+        225,
+        207,
+        246
+      ]
+    },
+    {
+      "label": "headlight",
+      "box": [
+        29,
+        230,
+        70,
+        248
+      ]
+    }
+  ]
+}

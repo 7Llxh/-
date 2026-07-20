@@ -1,0 +1,67 @@
+{
+  "image": "data/raw/acura_integra_1986/acura_integra_1986_0.jpg",
+  "model": "acura_integra_1986",
+  "view": "rear",
+  "vehicle_box": [
+    22,
+    16,
+    405,
+    299
+  ],
+  "parts": [
+    {
+      "label": "taillight",
+      "box": [
+        188,
+        154,
+        346,
+        211
+      ]
+    },
+    {
+      "label": "taillight",
+      "box": [
+        24,
+        132,
+        113,
+        175
+      ]
+    },
+    {
+      "label": "exhaust",
+      "box": [
+        76,
+        237,
+        101,
+        268
+      ]
+    },
+    {
+      "label": "wheel",
+      "box": [
+        347,
+        181,
+        402,
+        288
+      ]
+    },
+    {
+      "label": "window",
+      "box": [
+        80,
+        20,
+        358,
+        114
+      ]
+    },
+    {
+      "label": "window",
+      "box": [
+        372,
+        24,
+        412,
+        100
+      ]
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "image": "data/raw/acura_el_2003/2003 Acura EL_00y0y_bHouKMD7N8Y_600x450.jpg",
+  "model": "acura_el_2003",
+  "view": "front",
+  "vehicle_box": [
+    80,
+    42,
+    442,
+    263
+  ],
+  "parts": [
+    {
+      "label": "headlight",
+      "box": [
+        168,
+        157,
+        259,
+        210
+      ]
+    },
+    {
+      "label": "mirror",
+      "box": [
+        329,
+        103,
+        370,
+        125
+      ]
+    },
+    {
+      "label": "window",
+      "box": [
+        338,
+        56,
+        429,
+        122
+      ]
+    },
+    {
+      "label": "window",
+      "box": [
+        190,
+        54,
+        332,
+        134
+      ]
+    },
+    {
+      "label": "wheel",
+      "box": [
+        260,
+        175,
+        321,
+        255
+      ]
+    },
+    {
+      "label": "wheel",
+      "box": [
+        406,
+        127,
+        437,
+        173
+      ]
+    },
+    {
+      "label": "grille",
+      "box": [
+        97,
+        162,
+        169,
+        205
+      ]
+    }
+  ]
+}
