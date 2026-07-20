@@ -126,6 +126,8 @@ class AnnoTool:
                   command=lambda: self.load(self.idx + 1)).grid(row=r, column=1, pady=2); r += 1
         tk.Button(self.root, text="跳到未标注",
                   command=self.goto_unannotated).grid(row=r, column=1, pady=2); r += 1
+        tk.Button(self.root, text="下一车型 (M)",
+                  command=self.goto_next_model).grid(row=r, column=1, pady=2); r += 1
         tk.Button(self.root, text="下一张需增强 (N)",
                   command=self.goto_next_queue).grid(row=r, column=1, pady=2); r += 1
         self.status = tk.Label(self.root, text="", anchor="w", width=40)
@@ -134,6 +136,7 @@ class AnnoTool:
         self.root.bind("d", lambda e: self.load(self.idx + 1))
         self.root.bind("s", lambda e: self.save())
         self.root.bind("n", lambda e: self.goto_next_queue())
+        self.root.bind("m", lambda e: self.goto_next_model())
 
     def out_path(self, idx=None):
         i = self.idx if idx is None else idx
@@ -151,6 +154,19 @@ class AnnoTool:
     def goto_unannotated(self):
         self.idx = self.first_unannotated()
         self.load(self.idx)
+
+    def goto_next_model(self):
+        """跳到下一车型的第一个未标注图（每车型标几张就换车型）。"""
+        if not self.images:
+            return
+        cur_model = self.images[self.idx][0] if self.idx < len(self.images) else None
+        for i in range(self.idx + 1, len(self.images)):
+            model, _ = self.images[i]
+            if model != cur_model and not os.path.exists(self.out_path(i)):
+                self.load(i)
+                self.status.config(text=f"下一车型: {model}  部件:{len(self.parts)}")
+                return
+        self.status.config(text="后面没有未标注的新车型了")
 
     def _load_queue(self):
         if os.path.exists(QUEUE_FILE):
