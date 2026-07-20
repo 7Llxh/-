@@ -71,6 +71,7 @@ python -c "import torch; print(torch.__version__, torch.cuda.is_available())"
 ├── recognize.py              # 识别程序(双路径 + 可视化)
 ├── build_all.py              # 一键训练+建库
 ├── check_taillight_detection.py  # 检查尾灯漏检 + 产标注队列
+├── visualize_parts.py        # 部件检测可视化(画9类部件框,看准确度)
 ├── config.py                 # VMMRdb 配置(数据路径/阈值)
 ├── survey_vmmr.py            # 扫 VMMRdb 归并系列 + 剔除稀疏
 ├── requirements.txt
