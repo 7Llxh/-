@@ -1,0 +1,40 @@
+{
+  "image": "data/raw/buick_century_2000/buick_century_2000_10.jpg",
+  "model": "buick_century_2000",
+  "view": "rear",
+  "vehicle_box": [
+    44,
+    56,
+    443,
+    369
+  ],
+  "parts": [
+    {
+      "label": "taillight",
+      "box": [
+        45,
+        205,
+        441,
+        269
+      ]
+    },
+    {
+      "label": "plate",
+      "box": [
+        204,
+        226,
+        296,
+        276
+      ]
+    },
+    {
+      "label": "window",
+      "box": [
+        91,
+        63,
+        393,
+        157
+      ]
+    }
+  ]
+}

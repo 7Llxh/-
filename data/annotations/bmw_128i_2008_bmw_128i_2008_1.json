@@ -1,0 +1,67 @@
+{
+  "image": "data/raw/bmw_128i_2008/bmw_128i_2008_1.jpg",
+  "model": "bmw_128i_2008",
+  "view": "rear",
+  "vehicle_box": [
+    22,
+    44,
+    440,
+    369
+  ],
+  "parts": [
+    {
+      "label": "taillight",
+      "box": [
+        307,
+        227,
+        421,
+        304
+      ]
+    },
+    {
+      "label": "taillight",
+      "box": [
+        24,
+        186,
+        87,
+        267
+      ]
+    },
+    {
+      "label": "mirror",
+      "box": [
+        407,
+        89,
+        439,
+        118
+      ]
+    },
+    {
+      "label": "window",
+      "box": [
+        152,
+        78,
+        355,
+        146
+      ]
+    },
+    {
+      "label": "plate",
+      "box": [
+        140,
+        227,
+        235,
+        289
+      ]
+    },
+    {
+      "label": "exhaust",
+      "box": [
+        53,
+        340,
+        102,
+        371
+      ]
+    }
+  ]
+}

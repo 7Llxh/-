@@ -1,0 +1,58 @@
+{
+  "image": "data/raw/bmw_128i_2010/bmw_128i_2010_1.jpg",
+  "model": "bmw_128i_2010",
+  "view": "rear",
+  "vehicle_box": [
+    78,
+    0,
+    516,
+    400
+  ],
+  "parts": [
+    {
+      "label": "taillight",
+      "box": [
+        429,
+        198,
+        511,
+        306
+      ]
+    },
+    {
+      "label": "taillight",
+      "box": [
+        76,
+        209,
+        173,
+        296
+      ]
+    },
+    {
+      "label": "mirror",
+      "box": [
+        135,
+        17,
+        164,
+        50
+      ]
+    },
+    {
+      "label": "window",
+      "box": [
+        144,
+        28,
+        450,
+        149
+      ]
+    },
+    {
+      "label": "plate",
+      "box": [
+        238,
+        245,
+        367,
+        299
+      ]
+    }
+  ]
+}

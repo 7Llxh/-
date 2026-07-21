@@ -1,0 +1,85 @@
+{
+  "image": "data/raw/bmw_320i_2014/2014 BMW 320i xDrive_71mDHBn6+8L._UY560_.jpg",
+  "model": "bmw_320i_2014",
+  "view": "rear",
+  "vehicle_box": [
+    15,
+    40,
+    1154,
+    513
+  ],
+  "parts": [
+    {
+      "label": "taillight",
+      "box": [
+        230,
+        172,
+        453,
+        264
+      ]
+    },
+    {
+      "label": "taillight",
+      "box": [
+        18,
+        179,
+        111,
+        260
+      ]
+    },
+    {
+      "label": "plate",
+      "box": [
+        130,
+        211,
+        222,
+        272
+      ]
+    },
+    {
+      "label": "window",
+      "box": [
+        538,
+        50,
+        943,
+        222
+      ]
+    },
+    {
+      "label": "window",
+      "box": [
+        146,
+        65,
+        548,
+        150
+      ]
+    },
+    {
+      "label": "mirror",
+      "box": [
+        924,
+        151,
+        979,
+        209
+      ]
+    },
+    {
+      "label": "wheel",
+      "box": [
+        499,
+        295,
+        678,
+        505
+      ]
+    },
+    {
+      "label": "wheel",
+      "box": [
+        1035,
+        275,
+        1147,
+        451
+      ]
+    }
+  ]
+}

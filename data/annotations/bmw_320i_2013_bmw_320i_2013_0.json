@@ -1,0 +1,76 @@
+{
+  "image": "data/raw/bmw_320i_2013/bmw_320i_2013_0.jpg",
+  "model": "bmw_320i_2013",
+  "view": "rear",
+  "vehicle_box": [
+    0,
+    15,
+    411,
+    297
+  ],
+  "parts": [
+    {
+      "label": "taillight",
+      "box": [
+        200,
+        117,
+        319,
+        173
+      ]
+    },
+    {
+      "label": "taillight",
+      "box": [
+        394,
+        116,
+        412,
+        153
+      ]
+    },
+    {
+      "label": "plate",
+      "box": [
+        330,
+        134,
+        381,
+        171
+      ]
+    },
+    {
+      "label": "exhaust",
+      "box": [
+        280,
+        247,
+        313,
+        274
+      ]
+    },
+    {
+      "label": "wheel",
+      "box": [
+        70,
+        172,
+        150,
+        283
+      ]
+    },
+    {
+      "label": "window",
+      "box": [
+        143,
+        27,
+        352,
+        93
+      ]
+    },
+    {
+      "label": "window",
+      "box": [
+        -1,
+        28,
+        148,
+        109
+      ]
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "image": "data/raw/audi_s8_2014/2014 Audi S8_71--6RODuRL._UY560_.jpg",
+  "model": "audi_s8_2014",
+  "view": "front",
+  "vehicle_box": [
+    12,
+    35,
+    1260,
+    515
+  ],
+  "parts": [
+    {
+      "label": "headlight",
+      "box": [
+        263,
+        235,
+        484,
+        314
+      ]
+    },
+    {
+      "label": "mirror",
+      "box": [
+        744,
+        115,
+        844,
+        182
+      ]
+    },
+    {
+      "label": "window",
+      "box": [
+        741,
+        49,
+        1164,
+        191
+      ]
+    },
+    {
+      "label": "window",
+      "box": [
+        330,
+        31,
+        769,
+        194
+      ]
+    },
+    {
+      "label": "wheel",
+      "box": [
+        498,
+        253,
+        713,
+        512
+      ]
+    },
+    {
+      "label": "wheel",
+      "box": [
+        1063,
+        244,
+        1231,
+        467
+      ]
+    },
+    {
+      "label": "grille",
+      "box": [
+        37,
+        227,
+        260,
+        436
+      ]
+    }
+  ]
+}

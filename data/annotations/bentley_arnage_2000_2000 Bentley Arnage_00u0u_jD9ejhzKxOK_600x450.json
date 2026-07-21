@@ -1,0 +1,94 @@
+{
+  "image": "data/raw/bentley_arnage_2000/2000 Bentley Arnage_00u0u_jD9ejhzKxOK_600x450.jpg",
+  "model": "bentley_arnage_2000",
+  "view": "rear",
+  "vehicle_box": [
+    49,
+    105,
+    597,
+    358
+  ],
+  "parts": [
+    {
+      "label": "taillight",
+      "box": [
+        460,
+        234,
+        515,
+        313
+      ]
+    },
+    {
+      "label": "taillight",
+      "box": [
+        514,
+        233,
+        541,
+        283
+      ]
+    },
+    {
+      "label": "plate",
+      "box": [
+        536,
+        231,
+        575,
+        264
+      ]
+    },
+    {
+      "label": "wheel",
+      "box": [
+        249,
+        249,
+        335,
+        356
+      ]
+    },
+    {
+      "label": "wheel",
+      "box": [
+        51,
+        184,
+        106,
+        241
+      ]
+    },
+    {
+      "label": "mirror",
+      "box": [
+        105,
+        141,
+        128,
+        165
+      ]
+    },
+    {
+      "label": "window",
+      "box": [
+        306,
+        111,
+        475,
+        190
+      ]
+    },
+    {
+      "label": "window",
+      "box": [
+        117,
+        110,
+        287,
+        191
+      ]
+    },
+    {
+      "label": "exhaust",
+      "box": [
+        486,
+        338,
+        520,
+        362
+      ]
+    }
+  ]
+}

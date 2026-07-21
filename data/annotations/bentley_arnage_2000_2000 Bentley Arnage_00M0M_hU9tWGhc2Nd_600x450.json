@@ -1,0 +1,76 @@
+{
+  "image": "data/raw/bentley_arnage_2000/2000 Bentley Arnage_00M0M_hU9tWGhc2Nd_600x450.jpg",
+  "model": "bentley_arnage_2000",
+  "view": "front",
+  "vehicle_box": [
+    58,
+    28,
+    488,
+    407
+  ],
+  "parts": [
+    {
+      "label": "headlight",
+      "box": [
+        377,
+        238,
+        488,
+        309
+      ]
+    },
+    {
+      "label": "headlight",
+      "box": [
+        59,
+        252,
+        207,
+        324
+      ]
+    },
+    {
+      "label": "mirror",
+      "box": [
+        376,
+        93,
+        411,
+        123
+      ]
+    },
+    {
+      "label": "mirror",
+      "box": [
+        95,
+        95,
+        130,
+        120
+      ]
+    },
+    {
+      "label": "window",
+      "box": [
+        142,
+        44,
+        378,
+        141
+      ]
+    },
+    {
+      "label": "plate",
+      "box": [
+        248,
+        363,
+        345,
+        406
+      ]
+    },
+    {
+      "label": "grille",
+      "box": [
+        201,
+        251,
+        380,
+        340
+      ]
+    }
+  ]
+}

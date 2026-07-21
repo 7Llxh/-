@@ -1,0 +1,85 @@
+{
+  "image": "data/raw/bentley_continental_2006/2006 bentley continental gt_01717_58RCQmXUEnQ_600x450.jpg",
+  "model": "bentley_continental_2006",
+  "view": "front",
+  "vehicle_box": [
+    51,
+    51,
+    572,
+    383
+  ],
+  "parts": [
+    {
+      "label": "headlight",
+      "box": [
+        218,
+        236,
+        332,
+        303
+      ]
+    },
+    {
+      "label": "headlight",
+      "box": [
+        57,
+        203,
+        84,
+        259
+      ]
+    },
+    {
+      "label": "grille",
+      "box": [
+        76,
+        214,
+        204,
+        307
+      ]
+    },
+    {
+      "label": "window",
+      "box": [
+        218,
+        62,
+        450,
+        151
+      ]
+    },
+    {
+      "label": "window",
+      "box": [
+        451,
+        63,
+        538,
+        145
+      ]
+    },
+    {
+      "label": "mirror",
+      "box": [
+        475,
+        114,
+        520,
+        141
+      ]
+    },
+    {
+      "label": "wheel",
+      "box": [
+        376,
+        239,
+        448,
+        371
+      ]
+    },
+    {
+      "label": "wheel",
+      "box": [
+        524,
+        144,
+        562,
+        231
+      ]
+    }
+  ]
+}

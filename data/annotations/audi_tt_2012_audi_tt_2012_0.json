@@ -1,0 +1,58 @@
+{
+  "image": "data/raw/audi_tt_2012/audi_tt_2012_0.jpg",
+  "model": "audi_tt_2012",
+  "view": "rear",
+  "vehicle_box": [
+    34,
+    15,
+    316,
+    249
+  ],
+  "parts": [
+    {
+      "label": "taillight",
+      "box": [
+        249,
+        121,
+        310,
+        177
+      ]
+    },
+    {
+      "label": "taillight",
+      "box": [
+        37,
+        132,
+        82,
+        185
+      ]
+    },
+    {
+      "label": "plate",
+      "box": [
+        134,
+        158,
+        198,
+        190
+      ]
+    },
+    {
+      "label": "exhaust",
+      "box": [
+        214,
+        227,
+        236,
+        249
+      ]
+    },
+    {
+      "label": "exhaust",
+      "box": [
+        105,
+        232,
+        134,
+        249
+      ]
+    }
+  ]
+}

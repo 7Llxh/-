@@ -1,0 +1,67 @@
+{
+  "image": "data/raw/bentley_brooklands_1996/1996 bentley brooklands_00S0S_6bBM6jTInxR_600x450.jpg",
+  "model": "bentley_brooklands_1996",
+  "view": "front",
+  "vehicle_box": [
+    120,
+    78,
+    458,
+    290
+  ],
+  "parts": [
+    {
+      "label": "headlight",
+      "box": [
+        358,
+        154,
+        455,
+        207
+      ]
+    },
+    {
+      "label": "headlight",
+      "box": [
+        120,
+        160,
+        216,
+        216
+      ]
+    },
+    {
+      "label": "grille",
+      "box": [
+        220,
+        143,
+        360,
+        218
+      ]
+    },
+    {
+      "label": "window",
+      "box": [
+        190,
+        84,
+        387,
+        136
+      ]
+    },
+    {
+      "label": "mirror",
+      "box": [
+        387,
+        119,
+        420,
+        133
+      ]
+    },
+    {
+      "label": "mirror",
+      "box": [
+        150,
+        116,
+        183,
+        137
+      ]
+    }
+  ]
+}

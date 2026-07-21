@@ -1,0 +1,40 @@
+{
+  "image": "data/raw/blakely_bearcat_1977/1977 Blakely Bearcat_00J0J_bNIeCuYQ7eR_600x450.jpg",
+  "model": "blakely_bearcat_1977",
+  "view": "rear",
+  "vehicle_box": [
+    118,
+    83,
+    459,
+    335
+  ],
+  "parts": [
+    {
+      "label": "taillight",
+      "box": [
+        319,
+        274,
+        411,
+        315
+      ]
+    },
+    {
+      "label": "taillight",
+      "box": [
+        141,
+        271,
+        237,
+        309
+      ]
+    },
+    {
+      "label": "plate",
+      "box": [
+        236,
+        285,
+        319,
+        327
+      ]
+    }
+  ]
+}

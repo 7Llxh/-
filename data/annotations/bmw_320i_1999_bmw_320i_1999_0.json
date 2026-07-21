@@ -1,0 +1,58 @@
+{
+  "image": "data/raw/bmw_320i_1999/bmw_320i_1999_0.jpg",
+  "model": "bmw_320i_1999",
+  "view": "rear",
+  "vehicle_box": [
+    52,
+    43,
+    353,
+    271
+  ],
+  "parts": [
+    {
+      "label": "taillight",
+      "box": [
+        270,
+        158,
+        348,
+        207
+      ]
+    },
+    {
+      "label": "taillight",
+      "box": [
+        50,
+        165,
+        123,
+        217
+      ]
+    },
+    {
+      "label": "window",
+      "box": [
+        105,
+        56,
+        290,
+        111
+      ]
+    },
+    {
+      "label": "plate",
+      "box": [
+        162,
+        170,
+        235,
+        211
+      ]
+    },
+    {
+      "label": "exhaust",
+      "box": [
+        91,
+        259,
+        119,
+        280
+      ]
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "image": "data/raw/bmw_323i_1998/1998 bmw 323i convertible_00t0t_fUhjawflI7B_600x450.jpg",
+  "model": "bmw_323i_1998",
+  "view": "front",
+  "vehicle_box": [
+    137,
+    51,
+    473,
+    298
+  ],
+  "parts": [
+    {
+      "label": "headlight",
+      "box": [
+        187,
+        197,
+        304,
+        237
+      ]
+    },
+    {
+      "label": "headlight",
+      "box": [
+        404,
+        178,
+        471,
+        219
+      ]
+    },
+    {
+      "label": "mirror",
+      "box": [
+        137,
+        94,
+        168,
+        123
+      ]
+    },
+    {
+      "label": "mirror",
+      "box": [
+        376,
+        90,
+        413,
+        114
+      ]
+    },
+    {
+      "label": "window",
+      "box": [
+        177,
+        60,
+        368,
+        125
+      ]
+    },
+    {
+      "label": "wheel",
+      "box": [
+        167,
+        200,
+        192,
+        293
+      ]
+    }
+  ]
+}

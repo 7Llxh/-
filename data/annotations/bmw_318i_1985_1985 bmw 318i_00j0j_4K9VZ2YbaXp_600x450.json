@@ -1,0 +1,67 @@
+{
+  "image": "data/raw/bmw_318i_1985/1985 bmw 318i_00j0j_4K9VZ2YbaXp_600x450.jpg",
+  "model": "bmw_318i_1985",
+  "view": "front",
+  "vehicle_box": [
+    18,
+    0,
+    561,
+    390
+  ],
+  "parts": [
+    {
+      "label": "headlight",
+      "box": [
+        412,
+        259,
+        542,
+        323
+      ]
+    },
+    {
+      "label": "headlight",
+      "box": [
+        35,
+        261,
+        178,
+        335
+      ]
+    },
+    {
+      "label": "grille",
+      "box": [
+        158,
+        267,
+        428,
+        356
+      ]
+    },
+    {
+      "label": "window",
+      "box": [
+        154,
+        4,
+        437,
+        120
+      ]
+    },
+    {
+      "label": "mirror",
+      "box": [
+        435,
+        68,
+        480,
+        106
+      ]
+    },
+    {
+      "label": "mirror",
+      "box": [
+        115,
+        62,
+        153,
+        109
+      ]
+    }
+  ]
+}

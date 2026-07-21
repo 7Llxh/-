@@ -1,0 +1,103 @@
+{
+  "image": "data/raw/bmw_128i_2008/2008 BMW 128i Cabriolet_00c0c_8jR9cnJm6J7_600x450.jpg",
+  "model": "bmw_128i_2008",
+  "view": "front",
+  "vehicle_box": [
+    82,
+    78,
+    522,
+    390
+  ],
+  "parts": [
+    {
+      "label": "headlight",
+      "box": [
+        230,
+        245,
+        379,
+        309
+      ]
+    },
+    {
+      "label": "headlight",
+      "box": [
+        81,
+        210,
+        118,
+        264
+      ]
+    },
+    {
+      "label": "plate",
+      "box": [
+        111,
+        298,
+        193,
+        360
+      ]
+    },
+    {
+      "label": "wheel",
+      "box": [
+        362,
+        267,
+        445,
+        375
+      ]
+    },
+    {
+      "label": "wheel",
+      "box": [
+        491,
+        171,
+        523,
+        242
+      ]
+    },
+    {
+      "label": "grille",
+      "box": [
+        106,
+        231,
+        234,
+        303
+      ]
+    },
+    {
+      "label": "window",
+      "box": [
+        234,
+        90,
+        430,
+        171
+      ]
+    },
+    {
+      "label": "window",
+      "box": [
+        446,
+        94,
+        498,
+        163
+      ]
+    },
+    {
+      "label": "mirror",
+      "box": [
+        448,
+        135,
+        501,
+        160
+      ]
+    },
+    {
+      "label": "mirror",
+      "box": [
+        226,
+        123,
+        248,
+        146
+      ]
+    }
+  ]
+}

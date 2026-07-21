@@ -1,0 +1,67 @@
+{
+  "image": "data/raw/bmw_323i_1984/bmw_323i_1984_0.jpg",
+  "model": "bmw_323i_1984",
+  "view": "rear",
+  "vehicle_box": [
+    1,
+    54,
+    547,
+    396
+  ],
+  "parts": [
+    {
+      "label": "taillight",
+      "box": [
+        137,
+        194,
+        290,
+        280
+      ]
+    },
+    {
+      "label": "taillight",
+      "box": [
+        2,
+        161,
+        56,
+        245
+      ]
+    },
+    {
+      "label": "plate",
+      "box": [
+        66,
+        191,
+        143,
+        264
+      ]
+    },
+    {
+      "label": "window",
+      "box": [
+        146,
+        54,
+        379,
+        167
+      ]
+    },
+    {
+      "label": "window",
+      "box": [
+        411,
+        59,
+        545,
+        175
+      ]
+    },
+    {
+      "label": "wheel",
+      "box": [
+        353,
+        251,
+        461,
+        386
+      ]
+    }
+  ]
+}

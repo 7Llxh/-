@@ -1,0 +1,67 @@
+{
+  "image": "data/raw/bmw_128i_2008/2008 bmw 128i_00c0c_gr5rN0r0a8d_600x450.jpg",
+  "model": "bmw_128i_2008",
+  "view": "front",
+  "vehicle_box": [
+    21,
+    5,
+    594,
+    416
+  ],
+  "parts": [
+    {
+      "label": "headlight",
+      "box": [
+        231,
+        208,
+        458,
+        286
+      ]
+    },
+    {
+      "label": "wheel",
+      "box": [
+        147,
+        227,
+        256,
+        392
+      ]
+    },
+    {
+      "label": "wheel",
+      "box": [
+        24,
+        139,
+        76,
+        233
+      ]
+    },
+    {
+      "label": "mirror",
+      "box": [
+        45,
+        74,
+        107,
+        119
+      ]
+    },
+    {
+      "label": "window",
+      "box": [
+        114,
+        21,
+        382,
+        106
+      ]
+    },
+    {
+      "label": "grille",
+      "box": [
+        452,
+        189,
+        586,
+        259
+      ]
+    }
+  ]
+}

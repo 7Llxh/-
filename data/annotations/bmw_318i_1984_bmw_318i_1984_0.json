@@ -1,0 +1,49 @@
+{
+  "image": "data/raw/bmw_318i_1984/bmw_318i_1984_0.jpg",
+  "model": "bmw_318i_1984",
+  "view": "rear",
+  "vehicle_box": [
+    41,
+    38,
+    538,
+    412
+  ],
+  "parts": [
+    {
+      "label": "taillight",
+      "box": [
+        373,
+        254,
+        531,
+        319
+      ]
+    },
+    {
+      "label": "taillight",
+      "box": [
+        53,
+        255,
+        215,
+        324
+      ]
+    },
+    {
+      "label": "plate",
+      "box": [
+        238,
+        267,
+        355,
+        324
+      ]
+    },
+    {
+      "label": "window",
+      "box": [
+        111,
+        55,
+        490,
+        195
+      ]
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "image": "data/raw/audi_s8_2014/2014 Audi S8_71u9aFisiUL._UY560_.jpg",
+  "model": "audi_s8_2014",
+  "view": "side",
+  "vehicle_box": [
+    24,
+    36,
+    1631,
+    530
+  ],
+  "parts": [
+    {
+      "label": "taillight",
+      "box": [
+        1534,
+        188,
+        1615,
+        262
+      ]
+    },
+    {
+      "label": "headlight",
+      "box": [
+        36,
+        252,
+        149,
+        327
+      ]
+    },
+    {
+      "label": "mirror",
+      "box": [
+        560,
+        135,
+        636,
+        190
+      ]
+    },
+    {
+      "label": "window",
+      "box": [
+        523,
+        62,
+        1336,
+        177
+      ]
+    },
+    {
+      "label": "wheel",
+      "box": [
+        1172,
+        283,
+        1441,
+        507
+      ]
+    },
+    {
+      "label": "wheel",
+      "box": [
+        163,
+        283,
+        475,
+        519
+      ]
+    }
+  ]
+}

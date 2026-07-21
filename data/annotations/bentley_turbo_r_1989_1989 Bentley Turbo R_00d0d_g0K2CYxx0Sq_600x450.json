@@ -1,0 +1,76 @@
+{
+  "image": "data/raw/bentley_turbo_r_1989/1989 Bentley Turbo R_00d0d_g0K2CYxx0Sq_600x450.jpg",
+  "model": "bentley_turbo_r_1989",
+  "view": "front",
+  "vehicle_box": [
+    8,
+    65,
+    335,
+    318
+  ],
+  "parts": [
+    {
+      "label": "headlight",
+      "box": [
+        238,
+        201,
+        336,
+        258
+      ]
+    },
+    {
+      "label": "headlight",
+      "box": [
+        5,
+        209,
+        116,
+        258
+      ]
+    },
+    {
+      "label": "plate",
+      "box": [
+        144,
+        285,
+        217,
+        320
+      ]
+    },
+    {
+      "label": "grille",
+      "box": [
+        108,
+        203,
+        246,
+        273
+      ]
+    },
+    {
+      "label": "window",
+      "box": [
+        83,
+        72,
+        264,
+        139
+      ]
+    },
+    {
+      "label": "mirror",
+      "box": [
+        256,
+        102,
+        283,
+        119
+      ]
+    },
+    {
+      "label": "mirror",
+      "box": [
+        53,
+        105,
+        86,
+        125
+      ]
+    }
+  ]
+}

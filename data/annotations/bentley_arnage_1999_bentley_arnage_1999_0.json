@@ -1,0 +1,67 @@
+{
+  "image": "data/raw/bentley_arnage_1999/bentley_arnage_1999_0.jpg",
+  "model": "bentley_arnage_1999",
+  "view": "rear",
+  "vehicle_box": [
+    0,
+    45,
+    443,
+    324
+  ],
+  "parts": [
+    {
+      "label": "taillight",
+      "box": [
+        161,
+        157,
+        220,
+        228
+      ]
+    },
+    {
+      "label": "taillight",
+      "box": [
+        232,
+        162,
+        289,
+        217
+      ]
+    },
+    {
+      "label": "taillight",
+      "box": [
+        377,
+        162,
+        428,
+        219
+      ]
+    },
+    {
+      "label": "window",
+      "box": [
+        120,
+        51,
+        386,
+        138
+      ]
+    },
+    {
+      "label": "wheel",
+      "box": [
+        37,
+        198,
+        109,
+        320
+      ]
+    },
+    {
+      "label": "exhaust",
+      "box": [
+        194,
+        263,
+        236,
+        295
+      ]
+    }
+  ]
+}

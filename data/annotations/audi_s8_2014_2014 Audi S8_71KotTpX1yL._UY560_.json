@@ -1,0 +1,103 @@
+{
+  "image": "data/raw/audi_s8_2014/2014 Audi S8_71KotTpX1yL._UY560_.jpg",
+  "model": "audi_s8_2014",
+  "view": "rear",
+  "vehicle_box": [
+    15,
+    42,
+    1204,
+    508
+  ],
+  "parts": [
+    {
+      "label": "taillight",
+      "box": [
+        229,
+        168,
+        431,
+        270
+      ]
+    },
+    {
+      "label": "mirror",
+      "box": [
+        979,
+        148,
+        1039,
+        204
+      ]
+    },
+    {
+      "label": "window",
+      "box": [
+        196,
+        67,
+        600,
+        138
+      ]
+    },
+    {
+      "label": "window",
+      "box": [
+        593,
+        46,
+        988,
+        192
+      ]
+    },
+    {
+      "label": "wheel",
+      "box": [
+        506,
+        279,
+        728,
+        513
+      ]
+    },
+    {
+      "label": "wheel",
+      "box": [
+        1033,
+        256,
+        1189,
+        464
+      ]
+    },
+    {
+      "label": "plate",
+      "box": [
+        115,
+        217,
+        220,
+        291
+      ]
+    },
+    {
+      "label": "exhaust",
+      "box": [
+        274,
+        387,
+        360,
+        440
+      ]
+    },
+    {
+      "label": "exhaust",
+      "box": [
+        18,
+        374,
+        75,
+        413
+      ]
+    },
+    {
+      "label": "taillight",
+      "box": [
+        31,
+        172,
+        99,
+        247
+      ]
+    }
+  ]
+}

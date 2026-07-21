@@ -1,0 +1,85 @@
+{
+  "image": "data/raw/audi_tt_2000/audi_tt_2000_6.jpg",
+  "model": "audi_tt_2000",
+  "view": "rear",
+  "vehicle_box": [
+    65,
+    68,
+    545,
+    390
+  ],
+  "parts": [
+    {
+      "label": "taillight",
+      "box": [
+        290,
+        220,
+        394,
+        276
+      ]
+    },
+    {
+      "label": "taillight",
+      "box": [
+        66,
+        207,
+        112,
+        265
+      ]
+    },
+    {
+      "label": "mirror",
+      "box": [
+        462,
+        119,
+        504,
+        147
+      ]
+    },
+    {
+      "label": "window",
+      "box": [
+        390,
+        91,
+        472,
+        173
+      ]
+    },
+    {
+      "label": "window",
+      "box": [
+        156,
+        92,
+        362,
+        196
+      ]
+    },
+    {
+      "label": "wheel",
+      "box": [
+        373,
+        257,
+        433,
+        382
+      ]
+    },
+    {
+      "label": "wheel",
+      "box": [
+        497,
+        179,
+        541,
+        280
+      ]
+    },
+    {
+      "label": "plate",
+      "box": [
+        153,
+        243,
+        237,
+        286
+      ]
+    }
+  ]
+}

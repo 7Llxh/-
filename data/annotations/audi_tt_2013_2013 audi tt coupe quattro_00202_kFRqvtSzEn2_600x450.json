@@ -1,0 +1,31 @@
+{
+  "image": "data/raw/audi_tt_2013/2013 audi tt coupe quattro_00202_kFRqvtSzEn2_600x450.jpg",
+  "model": "audi_tt_2013",
+  "view": "rear",
+  "vehicle_box": [
+    7,
+    58,
+    324,
+    367
+  ],
+  "parts": [
+    {
+      "label": "taillight",
+      "box": [
+        264,
+        215,
+        321,
+        277
+      ]
+    },
+    {
+      "label": "taillight",
+      "box": [
+        12,
+        220,
+        65,
+        286
+      ]
+    }
+  ]
+}

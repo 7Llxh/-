@@ -1,0 +1,67 @@
+{
+  "image": "data/raw/bmw_320i_1981/bmw_320i_1981_0.jpg",
+  "model": "bmw_320i_1981",
+  "view": "rear",
+  "vehicle_box": [
+    0,
+    18,
+    394,
+    273
+  ],
+  "parts": [
+    {
+      "label": "taillight",
+      "box": [
+        166,
+        155,
+        268,
+        196
+      ]
+    },
+    {
+      "label": "taillight",
+      "box": [
+        335,
+        131,
+        390,
+        163
+      ]
+    },
+    {
+      "label": "plate",
+      "box": [
+        285,
+        155,
+        335,
+        194
+      ]
+    },
+    {
+      "label": "window",
+      "box": [
+        97,
+        22,
+        295,
+        104
+      ]
+    },
+    {
+      "label": "window",
+      "box": [
+        -2,
+        27,
+        83,
+        100
+      ]
+    },
+    {
+      "label": "wheel",
+      "box": [
+        39,
+        174,
+        117,
+        267
+      ]
+    }
+  ]
+}

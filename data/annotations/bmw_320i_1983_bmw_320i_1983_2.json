@@ -1,0 +1,58 @@
+{
+  "image": "data/raw/bmw_320i_1983/bmw_320i_1983_2.jpg",
+  "model": "bmw_320i_1983",
+  "view": "front",
+  "vehicle_box": [
+    32,
+    0,
+    417,
+    281
+  ],
+  "parts": [
+    {
+      "label": "headlight",
+      "box": [
+        283,
+        164,
+        396,
+        226
+      ]
+    },
+    {
+      "label": "headlight",
+      "box": [
+        51,
+        149,
+        152,
+        207
+      ]
+    },
+    {
+      "label": "window",
+      "box": [
+        112,
+        4,
+        344,
+        90
+      ]
+    },
+    {
+      "label": "mirror",
+      "box": [
+        341,
+        54,
+        387,
+        83
+      ]
+    },
+    {
+      "label": "mirror",
+      "box": [
+        84,
+        36,
+        122,
+        70
+      ]
+    }
+  ]
+}

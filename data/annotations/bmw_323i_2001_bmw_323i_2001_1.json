@@ -1,0 +1,40 @@
+{
+  "image": "data/raw/bmw_323i_2001/bmw_323i_2001_1.jpg",
+  "model": "bmw_323i_2001",
+  "view": "rear",
+  "vehicle_box": [
+    69,
+    34,
+    517,
+    401
+  ],
+  "parts": [
+    {
+      "label": "taillight",
+      "box": [
+        397,
+        201,
+        513,
+        284
+      ]
+    },
+    {
+      "label": "taillight",
+      "box": [
+        68,
+        205,
+        191,
+        294
+      ]
+    },
+    {
+      "label": "window",
+      "box": [
+        122,
+        52,
+        461,
+        155
+      ]
+    }
+  ]
+}

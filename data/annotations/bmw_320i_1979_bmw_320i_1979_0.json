@@ -1,0 +1,49 @@
+{
+  "image": "data/raw/bmw_320i_1979/bmw_320i_1979_0.jpg",
+  "model": "bmw_320i_1979",
+  "view": "rear",
+  "vehicle_box": [
+    21,
+    16,
+    250,
+    200
+  ],
+  "parts": [
+    {
+      "label": "taillight",
+      "box": [
+        184,
+        111,
+        247,
+        136
+      ]
+    },
+    {
+      "label": "taillight",
+      "box": [
+        23,
+        110,
+        95,
+        139
+      ]
+    },
+    {
+      "label": "window",
+      "box": [
+        50,
+        24,
+        219,
+        81
+      ]
+    },
+    {
+      "label": "plate",
+      "box": [
+        113,
+        120,
+        164,
+        152
+      ]
+    }
+  ]
+}

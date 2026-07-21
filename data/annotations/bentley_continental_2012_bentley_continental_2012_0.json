@@ -1,0 +1,85 @@
+{
+  "image": "data/raw/bentley_continental_2012/bentley_continental_2012_0.jpg",
+  "model": "bentley_continental_2012",
+  "view": "rear",
+  "vehicle_box": [
+    50,
+    63,
+    546,
+    360
+  ],
+  "parts": [
+    {
+      "label": "taillight",
+      "box": [
+        321,
+        181,
+        425,
+        271
+      ]
+    },
+    {
+      "label": "exhaust",
+      "box": [
+        362,
+        330,
+        437,
+        355
+      ]
+    },
+    {
+      "label": "wheel",
+      "box": [
+        157,
+        219,
+        271,
+        360
+      ]
+    },
+    {
+      "label": "wheel",
+      "box": [
+        56,
+        153,
+        100,
+        233
+      ]
+    },
+    {
+      "label": "window",
+      "box": [
+        235,
+        70,
+        462,
+        134
+      ]
+    },
+    {
+      "label": "window",
+      "box": [
+        88,
+        76,
+        197,
+        152
+      ]
+    },
+    {
+      "label": "mirror",
+      "box": [
+        54,
+        114,
+        87,
+        141
+      ]
+    },
+    {
+      "label": "plate",
+      "box": [
+        478,
+        262,
+        542,
+        301
+      ]
+    }
+  ]
+}

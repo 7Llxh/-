@@ -1,0 +1,49 @@
+{
+  "image": "data/raw/bmw_318i_1993/bmw_318i_1993_1.jpg",
+  "model": "bmw_318i_1993",
+  "view": "rear",
+  "vehicle_box": [
+    50,
+    4,
+    577,
+    420
+  ],
+  "parts": [
+    {
+      "label": "taillight",
+      "box": [
+        482,
+        207,
+        575,
+        311
+      ]
+    },
+    {
+      "label": "taillight",
+      "box": [
+        55,
+        221,
+        183,
+        311
+      ]
+    },
+    {
+      "label": "plate",
+      "box": [
+        263,
+        243,
+        389,
+        312
+      ]
+    },
+    {
+      "label": "window",
+      "box": [
+        111,
+        35,
+        527,
+        146
+      ]
+    }
+  ]
+}
