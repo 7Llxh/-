@@ -134,6 +134,12 @@ python build_all.py --only-embedder
 python build_all.py --skip-orientation --skip-parts
 ```
 
+子集验证特征网络（快速跑通：make_* 取图片最多的 N 系列，每系列最多 M 图）：
+
+```bash
+python build_all.py --only-embedder --limit 50 --max-per-series 30
+```
+
 手动命令（参考，等价于 `build_all.py`）：
 
 ```bash
@@ -151,7 +157,8 @@ python build_library.py vehicle
 加新车型**不一定需要标注**。先用 check 检查部件检测器在新车型上是否漏检尾灯：
 
 ```bash
-python check_taillight_detection.py 新车型名   # 只查新车型（也可不传参数查全部）
+python check_taillight_detection.py 新车型名        # 只查新车型（也可不传参数查全部）
+python check_taillight_detection.py --limit 50      # 查图片最多的 top50 系列
 ```
 
 check 同时把漏检图（rear 无尾灯）写入 `data/annotate_queue.json`，供标注工具按 `n` 逐张跳转补标。
@@ -169,7 +176,7 @@ check 同时把漏检图（rear 无尾灯）写入 `data/annotate_queue.json`，
 ### 5. 识别
 
 ```bash
-python recognize.py <图片路径>
+python recognize.py <图片或目录>   # 传目录则批量识别该目录所有图
 ```
 
 ## 模型与指标
