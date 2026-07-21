@@ -8,7 +8,7 @@ VEHICLE_CLASSES = [2, 5, 7]
 
 # 车辆检测模型（yolov8s 比 yolov8n 精度高；首次使用自动下载）
 MODEL_PATH = "weights/yolov8s.pt"
-# 部件检测模型（本项目训练，9 类部件，含 taillight）
+# 部件检测模型（本项目训练，8 类部件，含 taillight）
 PARTS_MODEL_PATH = "runs/detect/parts_v2/weights/best.pt"
 # 尾灯在部件检测器类别中的索引（names=[taillight, headlight, ...]）
 TAILLIGHT_CLS = 0

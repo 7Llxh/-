@@ -42,8 +42,7 @@ PART_COLORS = {
     "taillight": (0, 0, 255), "headlight": (255, 255, 0),
     "mirror": (255, 0, 255), "window": (0, 255, 255),
     "wheel": (128, 128, 0), "plate": (0, 128, 255),
-    "grille": (255, 128, 0), "bumper": (128, 0, 128),
-    "exhaust": (200, 200, 0),
+    "grille": (255, 128, 0), "exhaust": (200, 200, 0),
 }
 VIEW_LABELS = ["rear", "front", "side"]
 

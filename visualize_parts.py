@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-"""部件检测器可视化：在图上画 9 类部件框，人工判断检测准确度。
+"""部件检测器可视化：在图上画 8 类部件框，人工判断检测准确度。
 
-流程：车辆检测(YOLOv8s) -> 裁剪 -> 部件检测器(9类) -> 框映射回原图 -> 画框保存。
+流程：车辆检测(YOLOv8s) -> 裁剪 -> 部件检测器(8类) -> 框映射回原图 -> 画框保存。
 每类部件不同颜色 + 标签 + 置信度，车辆框（绿）一并画出。
 支持单图或目录批量。
 
@@ -20,7 +20,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 from detect_vehicle import _get_model, MODEL_PATH, _filter_vehicle_boxes, PARTS_MODEL_PATH
 
-# 9 类部件颜色（BGR）
+# 8 类部件颜色（BGR）
 PART_COLORS = {
     "taillight": (0, 0, 255), "headlight": (255, 255, 0),
     "mirror": (255, 0, 255), "window": (0, 255, 255),
