@@ -6,6 +6,7 @@
 
 输出: {图名}_recognize/{图名}_recognize.jpg + {图名}_result.json。
 """
+import glob
 import json
 import os
 import sys
@@ -164,4 +165,11 @@ def recognize(image_path):
 
 if __name__ == "__main__":
     path = sys.argv[1] if len(sys.argv) > 1 else input("图片路径: ").strip().strip('"')
-    recognize(path)
+    if os.path.isdir(path):
+        imgs = [p for p in glob.glob(os.path.join(path, "*"))
+                if p.lower().endswith((".jpg", ".jpeg", ".png", ".webp"))]
+        print(f"目录模式: {path} 下 {len(imgs)} 张图，逐张识别...")
+        for p in imgs:
+            recognize(p)
+    else:
+        recognize(path)
