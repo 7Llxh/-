@@ -24,6 +24,7 @@ def main():
         batch=64,
         project=os.path.join(HERE, "runs", "cls"),
         name="orientation",
+        exist_ok=True,
     )
     print("训练完成。权重: runs/cls/orientation/weights/best.pt")
 
