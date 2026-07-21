@@ -1,17 +1,21 @@
 # -*- coding: utf-8 -*-
-"""交互式标注工具。
+"""交互式标注工具（carident 环境）。
 
-读 data/raw/{车型}/ 图片，自动检测车辆（绿框参考），人工标部件框 + 选朝向，
-保存到 data/annotations/。
+读 data/raw/{车型}/ 图片，自动检测车辆框（绿框参考），人工标部件框 + 选朝向，
+保存到 data/annotations/。部件 8 类（taillight/headlight/mirror/window/wheel/plate/grille/exhaust）。
 
-用法（daily 环境）:
-    python annotate_tool.py
+用法:
+    python annotate_tool.py                  # 默认：跳到第一个未标注
+    python annotate_tool.py acura_cl_1997     # 指定起始车型（从该车型开始浏览）
 
 操作:
     - 左键拖动: 画当前选中类别的部件框
-    - 删除最后部件框 / 保存 / 上一张(a) / 下一张(d) / 保存(s)
+    - a/d: 上一张/下一张
+    - s: 保存（保存后若在标注队列则自动出队）
+    - m: 下一车型第一个未标注图（每车型标几张就换）
+    - n: 标注队列下一张（check 产的漏检图，复用 vehicle_box 跳过重检测）
 
-注: 尾灯自动检测（HSV）不准已移除，尾灯与其他部件一样人工画框；朝向人工选。
+注: 尾灯与其他部件一样人工画框；朝向人工选；亮灭自动判定。
 """
 import glob
 import json
