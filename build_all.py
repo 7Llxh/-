@@ -58,7 +58,7 @@ def main():
     ap.add_argument("--only-embedder", action="store_true",
                     help="只重训特征网络+建库（加新车型常用，等价于 --skip-orientation --skip-parts）")
     ap.add_argument("--limit", type=int, default=None,
-                    help="子集验证：make_taillight/vehicle_dataset 只取图片最多的 N 系列")
+                    help="子集验证：make_taillight_dataset 只取图片最多的 N 系列")
     ap.add_argument("--max-per-series", type=int, default=None,
                     help="子集验证：每系列最多 N 图（配合 --limit）")
     args = ap.parse_args()

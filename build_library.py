@@ -1,10 +1,9 @@
 # -*- coding: utf-8 -*-
-"""建库程序（F7/F8/F9）。特征库构建（尾灯/整车）。
+"""建库程序（F7/F9）。尾灯特征库构建。
 
 用训练好的嵌入网络对训练集提取 512 维特征，构建 FAISS 索引 + 元数据。
 用法:
-    python build_library.py taillight   # 尾灯库（主）
-    python build_library.py vehicle      # 整车库（兜底）
+    python build_library.py taillight   # 尾灯库
 输出 data/features/{name}_index.faiss + {name}_meta.json。
 """
 import glob

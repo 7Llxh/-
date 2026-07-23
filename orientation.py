@@ -1,9 +1,8 @@
 # -*- coding: utf-8 -*-
 """车辆朝向识别（F3）。YOLOv8n-cls 三分类 front/rear/side。
 
-推理接口 detect_orientation，供建库/识别主流程分流：
-  车尾(rear) -> 尾灯定位 -> 尾灯特征库检索（主路径）
-  正面/侧面/不确定 -> 整车特征库检索（兜底）
+推理接口 detect_orientation，供 check_taillight_detection 筛 rear 用
+（只检查 rear 图的尾灯漏检，不再分流到整车库）。
 
 详见 朝向识别-技术设计.md。
 """
@@ -12,7 +11,7 @@ from ultralytics import YOLO
 ORIENTATION_MODEL_PATH = "runs/cls/orientation/weights/best.pt"
 # ImageFolder 按字母序：front < rear < side，与训练时类别顺序一致
 CLASSES = ["front", "rear", "side"]
-CONF_THRESHOLD = 0.6  # 低于此值输出 uncertain，触发整车兜底，避免错误分流
+CONF_THRESHOLD = 0.6  # 低于此值输出 uncertain
 
 _model = None
 

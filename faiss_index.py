@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """FAISS 特征库构建与检索（F9/F18）。IndexFlatIP（cosine）。
 
-向量 L2 归一化后内积 = cosine 相似度。尾灯库/整车库各一份。
+向量 L2 归一化后内积 = cosine 相似度。尾灯库一份。
 元数据（车型、朝向、亮灭、样本路径、尾灯框）存 JSON，向量 id 与元数据 id 对齐。
 检索时按 lit_status 过滤候选集。详见 特征提取网络-技术设计.md。
 """
