@@ -93,7 +93,7 @@ def recognize(image_path):
         print("读图失败:", image_path)
         return []
     h, w = img.shape[:2]
-    res = _get_model(MODEL_PATH)(img, classes=[2, 5, 7], conf=0.4)[0]
+    res = _get_model(MODEL_PATH)(img, classes=[2, 5, 7], conf=0.4, verbose=False)[0]
     result_img = img.copy()
     results = []
 

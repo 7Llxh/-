@@ -33,3 +33,6 @@ data/annotate_queue.json
 
 # VMMRdb 系列清单（survey 生成，本地工作文件）
 data/vmmr_series.json
+
+# 评估产出（eval_recognize 生成，本地）
+eval_results.csv
