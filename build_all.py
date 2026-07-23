@@ -34,11 +34,8 @@ STEPS = [
     ("3. 部件数据集",    "make_parts_dataset.py",       [],            "parts"),
     ("4. 训练部件检测器", "train_parts.py",               [],            "parts"),
     ("5. 尾灯训练集",    "make_taillight_dataset.py",   [],            "embedder"),
-    ("6. 整车训练集",    "make_vehicle_dataset.py",     [],            "embedder"),
-    ("7. 训练尾灯网络",  "train_embedder.py",           ["taillight"], "embedder"),
-    ("8. 训练整车网络",  "train_embedder.py",           ["vehicle"],   "embedder"),
-    ("9. 构建尾灯库",    "build_library.py",            ["taillight"], "library"),
-    ("10.构建整车库",    "build_library.py",            ["vehicle"],   "library"),
+    ("6. 训练尾灯网络",  "train_embedder.py",           ["taillight"], "embedder"),
+    ("7. 构建尾灯库",    "build_library.py",            ["taillight"], "library"),
 ]
 
 
@@ -86,9 +83,9 @@ def main():
         if group in skip:
             print(f"[跳过] {name}")
             continue
-        # 子集参数传给 make_taillight/vehicle_dataset
+        # 子集参数传给 make_taillight_dataset
         extra = []
-        if script in ("make_taillight_dataset.py", "make_vehicle_dataset.py"):
+        if script == "make_taillight_dataset.py":
             if args.limit:
                 extra += ["--limit", str(args.limit)]
             if args.max_per_series:
