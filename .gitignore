@@ -36,3 +36,7 @@ data/vmmr_series.json
 
 # 评估产出（eval_recognize 生成，本地）
 eval_results.csv
+
+# 实施计划 + 阶段汇报（个人工作文档，不入库）
+docs/实施计划/
+docs/阶段汇报.md
